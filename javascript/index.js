@@ -1,28 +1,28 @@
 function updateTime ()
-    //California
+    //Chicago
 {
-    let californiaElement = document.querySelector( "#california" );
-    if ( californiaElement )
+    let chicagoElement = document.querySelector( "#chicago" );
+    if ( chicagoElement )
     {
-        let californiaDateElement = californiaElement.querySelector( ".date" );
-        let californiaTimeElement = californiaElement.querySelector( ".time" );
-        let californiaTime = moment().tz( "America/California" );
+        let chicagoDateElement = chicagoElement.querySelector( ".date" );
+        let chicagoTimeElement = chicagoElement.querySelector( ".time" );
+        let chicagoTime = moment().tz( "America/Chicago" );
 
-        californiaDateElement.innerHTML = californiaTime.format( "MMMM Do YYYY" );
-        californiaElement.innerHTML = californiaTime.format( "h:mm:ss [<small>]A [</small]" );
+        chicagoDateElement.innerHTML = chicagoTime.format( "MMMM Do YYYY" );
+        chicagoElement.innerHTML = chicagoTime.format( "h:mm:ss [<small>]A [</small]" );
     }
 }
-    //Oslo
+    //Malta
 {
-    let osloElement = document.querySelector( "#oslo" );
-    if ( osloElement )
+    let maltaElement = document.querySelector( "#malta" );
+    if ( maltaElement )
     {
-        let osloDateElement = osloElement.querySelector( "#.date" );
-        let osloTimeElement = osloElement.querySelector( "#time" );
-        let osloTime = moment().tz( "Europe/Oslo" );
+        let maltaDateElement = maltaElement.querySelector( "#.date" );
+        let maltaTimeElement = maltaElement.querySelector( "#time" );
+        let maltaTime = moment().tz( "Europe/Malta" );
 
-        osloDateElement.innerHTML = osloTime.format( "MMMM Do YYYY" );
-        osloTimeElement.innerHTML = osloTime.format( "h:mm:ss [<small>]A[</small>]" );
+        maltaDateElement.innerHTML = maltaTime.format( "MMMM Do YYYY" );
+        maltaTimeElement.innerHTML = maltaTime.format( "h:mm:ss [<small>]A[</small>]" );
     }
 }
 
@@ -35,9 +35,9 @@ function updateCity ( event )
     }
     let cityName = cityTimeZone.replace( "_", " " ).split( "/" )[1];
     let cityTime = moment().tz( cityTimeZone );
-    let cityElement = document.querySelector( "#cities" );
-    citiesElement.innerHTML = cityTimeZone;
-    citiesElement.innerHTML = `
+    let cityElement = document.querySelector( "#cities");
+    cityElement.innerHTML = cityTimeZone;
+    cityElement.innerHTML = `
   <div class="city">
     <div>
       <h2>${cityName}</h2>
