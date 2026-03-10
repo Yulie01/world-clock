@@ -1,4 +1,4 @@
-function updateTime()
+function updateChicagoTime()
     //Chicago
 {
     let chicagoElement = document.querySelector( "#chicago" );
@@ -11,6 +11,10 @@ function updateTime()
         chicagoDateElement.innerHTML = chicagoTime.format( "MMMM Do YYYY" );
         chicagoTimeElement.innerHTML = chicagoTime.format( "h:mm:ss [<small>]A [</small]" );
     }
+  
+  updateChicagoTime();
+  setInterval( updateChicagoTime, 1000 );
+    
 
     //Valletta
 
@@ -25,6 +29,9 @@ function updateTime()
         vallettaTimeElement.innerHTML = vallettaTime.format( "h:mm:ss [<small>]A[</small>]" );
     }
   
+  updateVallettaTime();
+  setInterval( updateVallettaTime, 1000 );
+  
   //Fiji
   let fijiElement = document.querySelector( "#fiji" );
     if ( fijiElement )
@@ -36,6 +43,9 @@ function updateTime()
         fijiDateElement.innerHTML = fijiTime.format( "MMMM Do YYYY" );
         fijiTimeElement.innerHTML = fijiTime.format( "h:mm:ss [<small>]A[</small>]" );
     }
+  
+  updateFijiTime();
+  setInterval( updateFijiTime, 1000 );
 }
 
 function updateCity ( event )
@@ -61,10 +71,8 @@ function updateCity ( event )
   </div>
   <a href="index.html">Show all cities</a>
   `;
+  setInterval( updateCity, 1000 );
 }
 
-updateTime()
-setInterval( updateTime, 1000 );
-
-let citiesSelectElement = document.querySelector( "#city" );
-citiesSelectElement.addEventListener( "change", updateCity );
+let citySelectElement = document.querySelector( "#city" );
+citySelectElement.addEventListener( "change", updateCity );
