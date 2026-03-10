@@ -1,4 +1,4 @@
-function updateTime ()
+function updateTime()
     //Chicago
 {
     let chicagoElement = document.querySelector( "#chicago" );
@@ -9,11 +9,11 @@ function updateTime ()
         let chicagoTime = moment().tz( "America/Chicago" );
 
         chicagoDateElement.innerHTML = chicagoTime.format( "MMMM Do YYYY" );
-        chicagoElement.innerHTML = chicagoTime.format( "h:mm:ss [<small>]A [</small]" );
+        chicagoTimeElement.innerHTML = chicagoTime.format( "h:mm:ss SS [<small>]A [</small]" );
     }
-}
+
     //Malta
-{
+
     let maltaElement = document.querySelector( "#malta" );
     if ( maltaElement )
     {
@@ -22,7 +22,7 @@ function updateTime ()
         let maltaTime = moment().tz( "Europe/Malta" );
 
         maltaDateElement.innerHTML = maltaTime.format( "MMMM Do YYYY" );
-        maltaTimeElement.innerHTML = maltaTime.format( "h:mm:ss [<small>]A[</small>]" );
+        maltaTimeElement.innerHTML = maltaTime.format( "h:mm:ss SS [<small>]A[</small>]" );
     }
 }
 
@@ -51,8 +51,8 @@ function updateCity ( event )
   `;
 }
 
-updateTime();
-setInterval(updateTime, 1000);
+updateTime()
+setInterval( updateTime, 1000 );
 
 let citiesSelectElement = document.querySelector( "#city" );
 citiesSelectElement.addEventListener( "change", updateCity );
