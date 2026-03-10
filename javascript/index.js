@@ -9,20 +9,32 @@ function updateTime()
         let chicagoTime = moment().tz( "America/Chicago" );
 
         chicagoDateElement.innerHTML = chicagoTime.format( "MMMM Do YYYY" );
-        chicagoTimeElement.innerHTML = chicagoTime.format( "h:mm:ss SS [<small>]A [</small]" );
+        chicagoTimeElement.innerHTML = chicagoTime.format( "h:mm:ss [<small>]A [</small]" );
     }
 
-    //Malta
+    //Valletta
 
-    let maltaElement = document.querySelector( "#malta" );
-    if ( maltaElement )
+    let vallettaElement = document.querySelector( "#valletta" );
+    if ( vallettaElement )
     {
-        let maltaDateElement = maltaElement.querySelector( "#.date" );
-        let maltaTimeElement = maltaElement.querySelector( "#time" );
-        let maltaTime = moment().tz( "Europe/Malta" );
+        let vallettaDateElement = vallettaElement.querySelector( "#.date" );
+        let vallettaTimeElement = vallettaElement.querySelector( "#time" );
+        let vallettaTime = moment().tz( "Europe/Malta" );
 
-        maltaDateElement.innerHTML = maltaTime.format( "MMMM Do YYYY" );
-        maltaTimeElement.innerHTML = maltaTime.format( "h:mm:ss SS [<small>]A[</small>]" );
+        vallettaDateElement.innerHTML = vallettaTime.format( "MMMM Do YYYY" );
+        vallettaTimeElement.innerHTML = vallettaTime.format( "h:mm:ss [<small>]A[</small>]" );
+    }
+  
+  //Fiji
+  let fijiElement = document.querySelector( "#fiji" );
+    if ( fijiElement )
+    {
+        let fijiDateElement = fijiElement.querySelector( "#.date" );
+        let fijiTimeElement = fijiElement.querySelector( "#time" );
+        let fijiTime = moment().tz( "Pacific/Fiji" );
+
+        fijiDateElement.innerHTML = fijiTime.format( "MMMM Do YYYY" );
+        fijiTimeElement.innerHTML = fijiTime.format( "h:mm:ss [<small>]A[</small>]" );
     }
 }
 
