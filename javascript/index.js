@@ -76,3 +76,6 @@ function updateCity ( event )
 
 let citySelectElement = document.querySelector( "#city" );
 citySelectElement.addEventListener( "change", updateCity );
+
+
+alert("Hello")
